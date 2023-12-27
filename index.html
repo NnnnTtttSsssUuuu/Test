@@ -1,27 +1,178 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Code Test</title>
 
+  
   <style>
-    #example{
-    color: blue;
-  }
-    .example{
-      color: red;
-    }
+  body{
+margin: 0;
+padding: 2em calc(1.5em + 5vw);
+font-family: "YuMincho", "游明朝", "Hiragino Mincho ProN", serif;
+
+body,input,textarea{
+  font-family: "YuMincho", "游明朝", "Hiragino Mincho ProN", serif;
+}
+
+p {
+  margin: 0 0 .25em;
+}
+
+#input2{
+  width: 80%;
+  height: 6em;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+#output span{
+  /* display:block; */
+  /* float:left; */
+  width: 80%;
+  font-size: 180%;
+  line-height: 2;
+}
+.newline{
+  display:block;
+  /* clear:left; */
+}
+.kanji{
+  position: relative;
+  background: yellow;
+}
+
+.kanji.joyo{
+  background:transparent;
+  /* float: left; */
+}
+
+/* .kanji.jinmei{
+  background: #FC1;
+} */
+
+.kanji.jitai{
+   color: red;
+}
+
+.kanji.jitai2{
+  color:blue;
+}
+
+.kanji.jikken{
+  background: greenyellow;
+}
+
+/* .kanji.surrogate{
+  color:white;
+  background:black;
+} */
+
+.kanji.shikaru{
+  color:black;
+}
+
+.kanji.salomoji{
+  color:red;
+  /* background: transparent; */
+}
+
+.kanji.itaiji{
+  color:red;
+}
+
+.daijisen:after{
+  content:'辞';
+  display:block;
+  position:absolute;
+  left:50%;
+  top:0;
+  width:1em;
+  height:1em;
+  line-height:1;
+  margin: -0.9em 0 0 -0.5em;
+  font-size: 50%;
+  text-align center;
+  color: red;
+}
+
+
+
+.kyoiku:after{
+  display:block;
+  position:absolute;
+  left:50%;
+  top:0;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  margin: -0.9em 0 0 -0.5em;
+  font-size: 50%;
+  text-align: center;
+  color: #4af;
+}
+
+.y1:after{
+  content:"1";
+}
+
+.y2:after {
+  content: "2";
+}
+
+.y3:after {
+  content: "3";
+}
+
+.y4:after {
+  content: "4";
+}
+
+.y5:after {
+  content: "5";
+}
+
+.y6:after {
+  content: "6";
+
 
   </style>
 
+  <title>JS漢字チェッカー(仮）</title>
+
 </head>
-
 <body>
-<div id ="example">example</div>
-<div class="example">example</div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+
+<h1>漢字チェッカー（仮）<br>CSS挿入バージョン</h1>
+<p>学年別学習漢字、常用漢字表外漢字と、標準的でない字体をチェックします<br><small>　※字体はJIS2004(JIS X 0213:2004)の例示字体を使用します。それ以前のJIS規格に準拠したフォントとは字体が異なる場合があります。<br>　※サロゲートペアで表示される文字のチェックに対応しました(2023/12/27)</small><br><br>凡例：
+<span class="kanji joyo kyoiku y1">学</span>
+<span class="kanji joyo kyoiku y1">年</span>
+<span class="kanji joyo kyoiku y4">別</span>
+<span class="kanji joyo kyoiku y2">教</span>
+<span class="kanji joyo kyoiku y3">育</span>
+<span class="kanji joyo kyoiku y3">漢</span>
+<span class="kanji joyo kyoiku y1">字</span>
+  <small>（数字は学年）</small> 
+  
+  <span><br>　　　常用漢字　</span>
+  <!-- <span class="kanji jinmei">人名用漢字</span> -->
+  <span class="kanji">表外漢字</span>
+  <span class="kanji joyo jitai">　標準的でない字体　</span>
+  <span class="kanji joyo jitai daijisen">掴</span>  <span class="kanji joyo">＝「大辞泉」採用字体　</span>
+  <!-- <span class="kanji surrogate">サロゲートペアの字体</span> -->
+  <!-- <span class="kanji itaiji">異体字セレクタの字体</span> -->
+</p>
+
+ <textarea id="input2" placeholder="ここに文章を入力してください"></textarea>
+<br>
+ <button>Check!</button>
+ <!-- <button>Clear All!</button> -->
 
 
+  <p id="output" type="text"></p>
 </body>
 </html>
