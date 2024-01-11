@@ -207,7 +207,9 @@ body {
         console.log("異体字認定1：",c);
         console.log(checkString.indexOf(c));
         console.log( checkString.charAt(checkString.indexOf(c) + 1));
-        c = c + "[=" + getHyojun(c) + "] ";
+        let hyojun = checkString.charAt(checkString.indexOf(c) + 1);
+        c = c + "[=" + hyojun + "] ";
+        /* c = c + "[=" + getHyojun(c) + "] "; */
         console.log("異体字認定2：",c);
       }
 
@@ -379,9 +381,9 @@ body {
     return /^[\uFE00-\uFE0F\uDB40]+$/.test(c);
   }
 
-  function getHyojun(c) {
+  /* function getHyojun(c) {
     return checkString.charAt(checkString.indexOf(c) + 1);
-  }
+  } */
 
   function getYearOfKyoikuKanji(c) {
     if (/^[一右雨円王音下火花貝学気九休玉金空月犬見五口校左三山子四糸字耳七車手十出女小上森人水正生青夕石赤千川先早草足村大男竹中虫町天田土二日入年白八百文木本名目立力林六]+$/.test(c)) { return 1; }
