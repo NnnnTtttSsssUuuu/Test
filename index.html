@@ -10,40 +10,116 @@
   <!-- <link rel="stylesheet" href="style.css"> -->
 
   <style>
+    textarea {
+      /* font-family: "YuMincho", "游明朝", "Hiragino Mincho ProN", serif; */
+    }
+
     p {
-      background-color: skyblue
+      margin: 0 0 .25em;
+    }
+
+    #input {
+      width: 80%;
+      height: 6em;
+      font-size: 100%;
+      line-height: 1.5;
     }
 
     #output span {
-        width: 80%;
-        font-size: 180%;
-        line-height: 2;
-      }
-      .newline {
-        display: block;
-      }
-      .kanji {
-        position: relative;
-        background: yellow;
-      }
-      .kanji.joyo {
-        background: transparent;
-      }
+      /* display:block; */
+      /* float:left; */
+      width: 80%;
+      font-size: 180%;
+      line-height: 2;
+    }
 
-      .daijisen::after {
-        content: '辞';
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: 0;
-        width: 1em;
-        height: 1em;
-        line-height: 1;
-        margin: -0.9em 0 0 -0.5em;
-        font-size: 50%;
-        text-align center;
-        color: red;
-      }
+    .newline {
+      display: block;
+      /* clear:left; */
+    }
+
+    .kanji {
+      position: relative;
+      background: yellow;
+    }
+
+    .kanji.joyo {
+      background: transparent;
+      /* float: left; */
+    }
+
+    .kanji.jitai {
+      color: red;
+    }
+
+    /* .kanji.surrogate{
+     color:white;
+      background:black;
+     } */
+    .kanji.shikaru {
+      color: black;
+    }
+
+    .kanji.salomoji {
+      color: red;
+    }
+
+    .kanji.itaijiselect {
+      color: red;
+    }
+
+    .daijisen::after {
+      content: '辞';
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1em;
+      height: 1em;
+      line-height: 1;
+      margin: -0.9em 0 0 -0.5em;
+      font-size: 50%;
+      text-align center;
+      color: red;
+    }
+
+    .kyoiku::after {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1em;
+      height: 1em;
+      line-height: 1;
+      margin: -0.9em 0 0 -0.5em;
+      font-size: 50%;
+      text-align: center;
+      color: #4af;
+    }
+
+    .y1:after {
+      content: "1";
+    }
+
+    .y2:after {
+      content: "2";
+    }
+
+    .y3:after {
+      content: "3";
+    }
+
+    .y4:after {
+      content: "4";
+    }
+
+    .y5:after {
+      content: "5";
+    }
+
+    .y6:after {
+      content: "6";
+    }
   </style>
 
   <title>JS漢字チェッカー(仮）</title>
