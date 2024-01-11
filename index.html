@@ -14,8 +14,36 @@
       background-color: skyblue
     }
 
+    #output span {
+        width: 80%;
+        font-size: 180%;
+        line-height: 2;
+      }
+      .newline {
+        display: block;
+      }
+      .kanji {
+        position: relative;
+        background: yellow;
+      }
+      .kanji.joyo {
+        background: transparent;
+      }
 
-
+      .daijisen::after {
+        content: '辞';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 1em;
+        height: 1em;
+        line-height: 1;
+        margin: -0.9em 0 0 -0.5em;
+        font-size: 50%;
+        text-align center;
+        color: red;
+      }
   </style>
 
   <title>JS漢字チェッカー(仮）</title>
