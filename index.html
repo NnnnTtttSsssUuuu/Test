@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   <!-- <link rel="stylesheet" href="style.css"> -->
 
   <style>
@@ -134,8 +136,7 @@ body {
 </head>
 
 <body>
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
 
 
   <h1>漢字チェッカー（仮）</h1>
@@ -169,7 +170,7 @@ body {
 
   <p id="output" type="text"></p>
 
-  /* <script src="main.js"></script> */
+    <!-- <script src="main.js"></script>  -->
 
 <script>
 
@@ -199,9 +200,13 @@ body {
       let d = inputText.substring(i + 1, i + 2);
       let e = inputText.substring(i + 2, i + 3);
 
+      console.log("文字チェック",c);
+
       // 単一コード文字の対応
       if (isJitaiKakunin(c)) {
+        console.log("異体字認定1：",c);
         c = c + "[=" + getHyojun(c) + "] ";
+        console.log("異体字認定2：",c);
       }
 
       // サロゲートペア「𨦇𩜙卉兔眞𠮷𥡴𨻶」の対応
