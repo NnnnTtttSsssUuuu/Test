@@ -205,6 +205,8 @@ body {
       // 単一コード文字の対応
       if (isJitaiKakunin(c)) {
         console.log("異体字認定1：",c);
+        console.log(checkString.indexOf(c));
+        console.log( checkString.charAt(checkString.indexOf(c) + 1));
         c = c + "[=" + getHyojun(c) + "] ";
         console.log("異体字認定2：",c);
       }
