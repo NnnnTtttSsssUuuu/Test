@@ -8,12 +8,13 @@ body {
 body,
 input,
 textarea {
-  font-family: "Hiragino Mincho ProN", "YuMincho", "游明朝", serif;
+  /* font-family: "Hiragino Mincho ProN", "YuMincho", "游明朝", serif; */
+  /* font-family: "Hiragino Mincho ProN", "YuMincho", "游明朝", serif; */
 }
 
-/* #output{
+#output{
     font-family: 'Noto Serif JP',"Hiragino Mincho ProN", "YuMincho", "游明朝",  serif;
-  } */
+  }
 
 p {
   margin: 0 0 .25em;
