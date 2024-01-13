@@ -106,6 +106,7 @@
 
       let c = hyojunkaText.substring(i, i + 1);
       let d = hyojunkaText.substring(i + 1, i + 2);
+      let e = hyojunkaText.substring(i + 2, i + 3);
       let klass = [], year;
 
       if (c === "\n") {
@@ -135,32 +136,52 @@
           klass.push("jitai");
 
         // 「𠮟」の対応
-        if (c === "\uD842" && d === "\uDF9F")
+        if (c === "\uD842" && d === "\uDF9F"){
+          c = c + d;
+          i++;
           klass.push("joyo shikaru");
+        }
+
 
         // 「𨦇𩜙卉兔眞𠮷𥡴𨻶」の対応
         if (c === "\uD862" && d === "\uDD87") {
+          c = c + d;
+          i++;
           klass.push("salomoji");
         }
         if (c === "\uD865" && d === "\uDF19") {
+          c = c + d;
+          i++;
           klass.push("salomoji");
         }
         if (c === "\uD87E" && d === "\uDC2C") {
+          c = c + d;
+          i++;
           klass.push("salomoji");
         }
         if (c === "\uD87E" && d === "\uDC0F") {
+          c = c + d;
+          i++;
           klass.push("salomoji");
         }
         if (c === "\uD87E" && d === "\uDD45") {
+          c = c + d;
+          i++;
           klass.push("salomoji");
         }
         if (c === "\uD842" && d === "\uDFB7") {
+          c = c + d;
+          i++;
           klass.push("salomoji");
         }
         if (c === "\uD856" && d === "\uDC74") {
+          c = c + d;
+          i++;
           klass.push("salomoji");
         }
         if (c === "\uD863" && d === "\uDEF6") {
+          c = c + d;
+          i++;
           klass.push("salomoji");
         }
 
@@ -180,6 +201,8 @@
 
         // 異体字セレクタの対応
         if (isItaijiSelector(d)) {
+          c = c + d + e;
+          i= i + 2;
           klass.push("itaijiselect");
         }
       }
