@@ -13,18 +13,33 @@
   // チェックボタン押下の処理
 
   document.querySelector('#checkButton').addEventListener('click', () => {
-
     const inputText = document.querySelector('#input').value;
-    let hyojunkaText = "";
     const outputText = document.querySelector('#output');
     outputText.textContent = "";
+    let hyojunkaText = "";
+
+    //以下、デバグのためのコード群
+    const saloge1 = "𠮟卉𡈽  ";
+    const saloge2 = "\u{2F82C}"; //卉
+    const saloge3 = "\u{D844}\u{DE3D}";//𡈽
+    const itasele1 = "\u{845B}\u{E0100}";//葛󠄀
+    const itasele2 = "\u{845B}\u{DB40}\u{DD00}";//葛󠄀
+
+    outputText.insertAdjacentText("beforeend", saloge1);
+    outputText.insertAdjacentText("beforeend", "not叱");
+    outputText.insertAdjacentText("beforeend", saloge2);
+    outputText.insertAdjacentText("beforeend", saloge3);
+    outputText.insertAdjacentText("beforeend", itasele1);
+    outputText.insertAdjacentText("beforeend", itasele2);
+
 
     // ★以下、標準的な字体を表示するループ１
     for (let i = 0; i < inputText.length; i++) {
-
       let c = inputText.substring(i, i + 1);
       let d = inputText.substring(i + 1, i + 2);
       let e = inputText.substring(i + 2, i + 3);
+
+      console.log(c.charCodeAt(0).toString(16));
 
       // 単一コード文字の対応
       if (isJitaiKakunin(c)) {
@@ -82,6 +97,9 @@
     // ループ１終わり
 
     // console.log("中間生成テキスト=", hyojunkaText);
+    //以下、中間生成テキストを出力
+    outputText.insertAdjacentText("beforeend", hyojunkaText);
+
 
     //★以下、文字内容に合わせたCSSを追加するループ２
     for (let i = 0; i < hyojunkaText.length; i++) {

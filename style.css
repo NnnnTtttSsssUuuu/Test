@@ -2,14 +2,12 @@
 
 body {
   margin: 0;
-  padding: 2em calc(1.5em + 5vw);
+  padding: 2em 4em;
+  /* padding: 2em calc(1.5em + 5vw); */
 }
 
-body,
-input,
-textarea {
-  /* font-family: "Hiragino Mincho ProN", "YuMincho", "游明朝", serif; */
-  /* font-family: "Hiragino Mincho ProN", "YuMincho", "游明朝", serif; */
+body, input, textarea {
+  font-family: "Hiragino Mincho ProN", "YuMincho", "游明朝", serif;
 }
 
 #output{
@@ -29,7 +27,7 @@ p {
 
 #output span {
   width: 80%;
-  font-size: 180%;
+  font-size: 160%;
   line-height: 2;
 }
 
