@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  padding: 2em 4em;
+  padding: 2em 2em;
   /* padding: 2em calc(1.5em + 5vw); */
 }
 
@@ -19,7 +19,7 @@ p {
 }
 
 #input {
-  width: 80%;
+  width: 90%;
   height: 6em;
   font-size: 100%;
   line-height: 1.5;
