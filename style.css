@@ -10,8 +10,37 @@ body, input, textarea {
   font-family: "Hiragino Mincho ProN", "YuMincho", "游明朝", serif;
 }
 
+.kyocho{
+  color: red;
+  font-size: 120%;
+}
+
+h2{
+  border-bottom: 3px solid black;
+}
+
+h3{
+background: black;
+color: white;
+padding:1px 10px;
+}
+
+h4{
+  border-bottom: 2px solid black;
+}
+
+.kakomi{
+ border: 4px darkslategray dotted;
+ margin:3px;
+ padding:1% ;
+}
+
+
+
+
+
 #output{
-    font-family: 'Noto Serif JP',"Hiragino Mincho ProN", "YuMincho", "游明朝",  serif;
+    font-family: "Hiragino Mincho ProN", "YuMincho", "游明朝", 'Noto Serif JP', serif;
   }
 
 p {
@@ -48,6 +77,23 @@ p {
   color: red;
 }
 
+.kanji2 {
+  position: relative;
+  background: yellow;
+  font-size: 160%;
+}
+
+.kanji2.joyo {
+  background: transparent;
+  font-size: 160%;
+}
+
+.kanji2.jitai {
+  color: red;
+  font-size: 160%;
+}
+
+
 .kanji.shikaru {
   color: black;
 }
@@ -60,20 +106,6 @@ p {
   color: red;
 }
 
-.daijisen::after {
-  content: '辞';
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  margin: -0.9em 0 0 -0.5em;
-  font-size: 50%;
-  text-align center;
-  color: red;
-}
 
 .kyoiku::after {
   display: block;
