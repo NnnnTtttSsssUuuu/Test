@@ -7,7 +7,7 @@ body {
 }
 
 body, input, textarea {
-  font-family: "Hiragino Mincho ProN", "YuMincho", "游明朝", serif;
+  font-family: "YuMincho", "游明朝",  "Hiragino Mincho ProN", serif;
 }
 
 .kyocho{
@@ -34,8 +34,6 @@ h4{
  margin:3px;
  padding:1% ;
 }
-
-
 
 
 
@@ -98,9 +96,6 @@ p {
   color: black;
 }
 
-.kanji.salomoji {
-  color: red;
-}
 
 .kanji.itaijiselect {
   color: red;
