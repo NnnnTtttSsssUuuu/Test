@@ -3,16 +3,14 @@
 body {
   margin: 0;
   padding: 2em 2em;
-  /* padding: 2em calc(1.5em + 5vw); */
 }
 
 body, input, textarea {
   font-family: "YuMincho", "游明朝",  "Hiragino Mincho ProN", serif;
 }
 
-.kyocho{
-  color: red;
-  font-size: 120%;
+p {
+  margin: 0 0 .25em;
 }
 
 h2{
@@ -29,20 +27,9 @@ h4{
   border-bottom: 2px solid black;
 }
 
-.kakomi{
- border: 4px darkslategray dotted;
- margin:3px;
- padding:1% ;
-}
-
-
-
-#output{
-    font-family:  "YuMincho", "游明朝", "Hiragino Mincho ProN", serif;
-  }
-
-p {
-  margin: 0 0 .25em;
+rt{
+  color: #4af;
+  font-size: 50%;
 }
 
 #input {
@@ -52,14 +39,22 @@ p {
   line-height: 1.5;
 }
 
-#output span {
+#output{
+  font-family:  "YuMincho", "游明朝", "Hiragino Mincho ProN", serif;
   width: 80%;
   font-size: 160%;
   line-height: 2;
 }
 
-.newline {
-  display: block;
+.kyocho{
+  color: red;
+  font-size: 120%;
+}
+
+.kakomi{
+ border: 4px darkslategray dotted;
+ margin:3px;
+ padding:1% ;
 }
 
 .kanji {
@@ -91,50 +86,10 @@ p {
   font-size: 160%;
 }
 
-
 .kanji.shikaru {
   color: black;
 }
 
-
 .kanji.itaijiselect {
   color: red;
 }
-
-
-.kyoiku::after {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 1em;
-  height: 1em;
-  line-height: 1;
-  margin: -0.9em 0 0 -0.5em;
-  font-size: 50%;
-  text-align: center;
-  color: #4af;
-}
-
-.y1:after {
-  content: "1";
-}
-
-.y2:after {
-  content: "2";
-}
-
-.y3:after {
-  content: "3";
-}
-
-.y4:after {
-  content: "4";
-}
-
-.y5:after {
-  content: "5";
-}
-
-.y6:after {
-  content: "6";
