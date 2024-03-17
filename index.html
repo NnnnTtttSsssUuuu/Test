@@ -11,28 +11,55 @@
 </head>
 
 <body>
+  <header>
+    <nav class="pc-nav">
+      <ul>
+        <li><a class="gray" href="index.html">漢字チェッカー</a></li>
+        <li><a href="about.html">使い方</a></li>
+        <li><a href="yougo.html">漢字校正用語集</a></li>
+      </ul>
+    </nav>
 
-  <h1>漢字チェッカー(仮)</h1>
+    <nav class="sp-nav">
+      <ul>
+        <li><a href="index.html">漢字チェッカー</a></li>
+        <li><a href="about.html">使い方</a></li>
+        <li><a href="yougo.html">漢字校正用語集</a></li>
+        <li class="close"><span>閉じる</span></li>
+      </ul>
+    </nav>
+
+    <div id="hamburger">
+      <span></span>
+    </div>
+
+    <h1>漢字チェッカー(仮)</h1>
+
+  </header>
 
   <p>学年別教育漢字、常用漢字表外漢字と、標準的でない字体をチェックします。
-    <br>ご利用の前に<a href="about.html" target="_blank" rel="noopener noreferrer">こちら</a>をお読みください。
-    <br><font size="2">【小学館出版クォリティーセンター試用バージョン 2024/2/6版】</font><br>
+    <br>ご利用の前に<a href="about.html" target="_blank">使い方</a>をお読みください。
+    <br>
+    <small>【小学館出版クォリティーセンター試用バージョン 2024/3/14版 「校正用語集」設置】</small><br>
     <br>凡例：
-    <ruby>学<rt>1</rt></ruby><ruby>年<rt>1</rt></ruby><ruby>別<rt>4</rt></ruby><ruby>教<rt>2</rt></ruby><ruby>育<rt>3</rt></ruby><ruby>漢<rt>3</rt></ruby><ruby>字<rt>1</rt></ruby>
+    <ruby>学<rt>1</rt></ruby><ruby>年<rt>1</rt></ruby><ruby>別<rt>4</rt></ruby><ruby>教<rt>2</rt></ruby><ruby>育<rt>3</rt>
+    </ruby><ruby>漢<rt>3</rt></ruby><ruby>字<rt>1</rt></ruby>
     <small>（数字は学年）</small>
     <span>　常用漢字　</span>
     <span class="kanji">表外漢字</span>
-    <span class="kanji joyo jitai"><br>　　　標準的でない字体</span><span class="kanji joyo">[=標準的な字体]</span>
-    <span class="kanji joyo"><br>　　　JIS90フォントで字形が変わる字[▵</span><span class="kanji joyo jitai">標準的でない字体</span><span class="kanji joyo"></span>]
-   
+    <span class="kanji joyo itaiji"><br>　　　標準的でない字体</span><span class="kanji joyo">[=標準的な字体]</span>
+    <span class="kanji joyo"><br>　　　JIS90フォントで字形が変わる字[△</span><span class="kanji joyo itaiji">標準的でない字体</span><span
+      class="kanji joyo"></span>]
+
+    <textarea id="input" placeholder="ここに文章を入力してください"></textarea>
+
+    <br>
+    <button id="checkButton">Check</button>
+    <button id="clearButton">Clear Text</button>
+
   </p>
 
-  <textarea id="input" placeholder="ここに文章を入力してください"></textarea>
-  <br>
-  
-  <button id="checkButton">Check</button>
-  <button id="clearButton">Clear Text</button>
-
+  <p id="chuuki"></p>
   <p id="output"></p>
 
   <script src="main.js"></script>

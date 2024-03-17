@@ -5,6 +5,9 @@
 //2024/2/2 異体字追加
 //2/5 内部コード整理
 //2/6 漢字配当学年をルビで表示する
+//2/8 エラー修正
+//2/25 CJK部首補助、康熙部首に対応。微少な修正
+//2/26 空白行を詰めるなど、見栄えを微修正。
 
 
 {
@@ -12,22 +15,24 @@
   const checkString = '亜亞悪惡圧壓囲圍為爲医醫壱壹逸逸稲稻飲飮隠隱羽羽閏閠営營栄榮穎頴衛衞鋭銳益益駅驛悦悅謁謁閲閱円圓園薗縁緣艶艷塩鹽奥奧応應横橫欧歐殴毆黄黃温溫穏穩仮假価價禍禍画畫会會壊壞悔悔懐懷海海絵繪慨慨概槪拡擴殻殼覚覺学學岳嶽楽樂喝喝渇渴褐褐勧勸巻卷寛寬歓歡漢漢缶罐観觀関關陥陷館館巌巖顔顏器器既既既旣帰歸気氣祈祈亀龜偽僞戯戲犠犧旧舊拠據挙擧虚虛峡峽挟挾教敎狭狹郷鄕響響尭堯暁曉勤勤謹謹区區駆驅駆駈勲勳薫薰径徑恵惠掲揭渓溪経經継繼茎莖荊荆蛍螢軽輕鶏鷄芸藝撃擊欠缺倹儉剣劍圏圈検檢権權献獻研硏県縣険險顕顯験驗厳嚴戸戶呉吳娯娛効效広廣恒恆昂昻晃晄紘綋鉱鑛高髙号號轟軣告吿国國穀穀黒黑歳歲済濟砕碎斎齋剤劑崎﨑柵栅桜櫻冊册殺殺雑雜参參惨慘桟棧産產蚕蠶賛贊残殘祉祉糸絲視視飼飼歯齒児兒爾尓辞辭湿濕実實舎舍写寫煮煮社社者者釈釋寿壽収收臭臭従從渋澁獣獸縦縱祝祝粛肅処處暑暑渚渚緒緖署署諸諸叙敍奨奬将將尚尙渉涉焼燒祥祥称稱証證乗乘剰剩壌壤嬢孃条條浄淨状狀畳疊穣穰譲讓醸釀嘱囑触觸寝寢慎愼晋晉真眞神神尽盡図圖粋粹酔醉随隨髄髓数數枢樞瀬瀨晴晴清淸精精声聲青靑静靜斉齊税稅摂攝窃竊節節説說絶絕専專戦戰浅淺潜潛繊纖践踐銭錢禅禪曽曾祖祖鼠鼡僧僧双雙壮壯層層捜搜挿揷挿插巣巢争爭痩瘦総總聡聰荘莊装裝騒騷増增憎憎臓臟蔵藏贈贈即卽属屬続續堕墮体體対對帯帶滞滯台臺滝瀧択擇沢澤琢琢鐸鈬脱脫単單嘆嘆担擔胆膽団團弾彈断斷痴癡遅遲昼晝虫蟲鋳鑄猪猪著著庁廳徴徵懲懲聴聽勅敕鎮鎭塚塚禎禎逓遞鉄鐵転轉点點伝傳兎兔都都党黨島嶋盗盜灯燈当當闘鬪闘鬭徳德独獨読讀突突届屆内內縄繩難難弐貳禰祢悩惱脳腦覇霸廃廢拝拜杯盃梅梅売賣麦麥発發髪髮抜拔繁繁飯飯晩晚蛮蠻卑卑碑碑秘祕彦彥姫姬浜濱賓賓頻頻敏敏瓶甁富冨侮侮福福払拂仏佛併倂塀塀並竝変變辺邊勉勉弁辨弁瓣弁辯舗舖歩步穂穗宝寶峰峯萌萠褒襃豊豐墨墨没沒翻飜毎每槙槇万萬満滿免免麺麵黙默餅餠戻戾野埜弥彌薬藥訳譯靖靖祐祐予豫余餘与與誉譽揺搖様樣謡謠遥遙来來頼賴乱亂欄欄蘭蘭覧覽隆隆竜龍虜虜両兩涼凉猟獵遼遼緑綠塁壘涙淚類類励勵礼禮霊靈齢齡暦曆歴歷恋戀練練蓮蓮錬鍊炉爐労勞廊廊朗朗楼樓郎郞禄祿録錄亘亙湾灣儘侭喩喻埒埓壺壷彎弯彙彚懺懴攪撹曠昿枡桝檜桧檮梼櫟檪欅﨔鬱欝濤涛灌潅滲渗濾沪瑶瑤疇畴箋䇳箏筝籠篭藪薮蘆芦蠣蛎蠅蝿諫諌賤賎邇迩靱靭頸頚鰺鯵鶯鴬凜凛熙煕俠侠俱倶剝剥吞呑啞唖噓嘘嚙噛囊嚢塡填姸妍屛屏屢屡幷并搔掻摑掴攢攅潑溌瀆涜焰焔禱祷簞箪繡繍繫繋萊莱蔣蒋﨟臈蟬蝉蠟蝋軀躯醬醤醱醗頰頬顚顛驒騨鷗鴎鹼鹸麴麹';
 
 
-  // 異体字リスト 標準字（サロゲートペア）・異体字（単独コード）の順で並ぶ
+  // 異体字リスト 標準字（単独コード）・異体字（サロゲートペア）の順で並ぶ
   const checkString2 = '吉𠮷稽𥡴隙𨻶真眞巽巽兎兔卉卉鋏𨦇饒𩜙';
 
 
-  // フォントで表示される異体字リスト  標準字・異体字(異体字セレクタ）の順で並ぶ
+  // フォントで表示される異体字リスト  標準字（単独コード）・異体字(異体字セレクタ）の順で並ぶ
   const checkString3 = '茨茨󠄀淫淫󠄀餌餌󠄀牙牙󠄀葛葛󠄀僅僅󠄀隙隙󠄀煎煎󠄀詮詮󠄀遡遡󠄀遜遜󠄀捗捗󠄀溺溺󠄀賭賭󠄀謎謎󠄀箸箸󠄀蔽蔽󠄀蔑蔑󠄀餅餅󠄀嘲嘲󠄀逢逢󠄀芦芦󠄀飴飴󠄀溢溢󠄀鰯鰯󠄀迂迂󠄀厩厩󠄀噂噂󠄀襖襖󠄀迦迦󠄀恢恢󠄀晦晦󠄀鞄鞄󠄀翰翰󠄀翫翫󠄀徽徽󠄀祇祇󠄀汲汲󠄀笈笈󠄀卿卿󠄀饗饗󠄀喰喰󠄀櫛櫛󠄁屑屑󠄀祁祁󠄀倦倦󠄀捲捲󠄀諺諺󠄀巷巷󠄀鵠鵠󠄀甑甑󠄀榊榊󠄀薩薩󠄀鯖鯖󠄀錆錆󠄀餐餐󠄀杓杓󠄀灼灼󠄀酋酋󠄀薯薯󠄀藷藷󠄀哨哨󠄀鞘鞘󠄀蝕蝕󠄀訊訊󠄀逗逗󠄀摺摺󠄀撰撰󠄀煽煽󠄀穿穿󠄀箭箭󠄀噌噌󠄀揃揃󠄀腿腿󠄀蛸蛸󠄀辿辿󠄀樽樽󠄀歎歎󠄀註註󠄀瀦瀦󠄀槌槌󠄀鎚鎚󠄀辻辻󠄀鄭鄭󠄀擢擢󠄀兎兎󠄀堵堵󠄀屠屠󠄀瀞瀞󠄀遁遁󠄀灘灘󠄀楢楢󠄀禰禰󠄀牌牌󠄀這這󠄀秤秤󠄀叛叛󠄀挽挽󠄀樋樋󠄀稗稗󠄀逼逼󠄀謬謬󠄀豹豹󠄀廟廟󠄀瀕瀕󠄀瞥瞥󠄀篇篇󠄀娩娩󠄀庖庖󠄀蓬蓬󠄀鱒鱒󠄀迄迄󠄀儲儲󠄀籾籾󠄀鑓鑓󠄀愈愈󠄀猷猷󠄀漣漣󠄁煉煉󠄁簾簾󠄀榔榔󠄀冤冤󠄀叟叟󠄀囀囀󠄀扁扁󠄀疼疼󠄀篝篝󠄀艘艘󠄀芒芒󠄀蠅蠅󠄀訝訝󠄀騙騙󠄀鴉鴉󠄀';
 
-
-
+  document.getElementById('input').focus();
 
   // チェックボタン押下の処理
   document.querySelector('#checkButton').addEventListener('click', () => {
     const inputText = document.querySelector('#input').value;
     const outputText = document.querySelector('#output');
+    const chuukiText = document.querySelector('#chuuki');
     outputText.textContent = "";
+    chuukiText.textContent = "";
     let hyojunkaText = "";
+    let bushu = 0;
 
     // ★以下、標準的な字体を表示するループ１
     for (let i = 0; i < inputText.length; i++) {
@@ -50,6 +55,7 @@
         c = c + d + e + "[=" + c + "] ";
         i = i + 2;
         hyojunkaText = hyojunkaText + c;
+        // console.log("異体字セレクタ認識", c)
         continue;
       }
 
@@ -62,11 +68,10 @@
         continue;
       }
 
-
       // 同一コードで異体字の生じる可能性のある文字の対応（異体字セレクタ編）
       if (checkString3.indexOf(c) % 4 === 0) {
         let hyojun = checkString3.charAt(checkString3.indexOf(c) + 1) + checkString3.charAt(checkString3.indexOf(c) + 2) + checkString3.charAt(checkString3.indexOf(c) + 3);
-        c = c + "[▵" + hyojun + "] ";
+        c = c + "[△" + hyojun + "] ";
         hyojunkaText = hyojunkaText + c;
         continue;
       }
@@ -100,30 +105,41 @@
       let klass = [], year;
 
       if (c === "\n") {
-        outputText.insertAdjacentHTML('beforeend', '<br>');
+        if (d !== "\n") {
+          outputText.insertAdjacentHTML('beforeend', '<br>');
+        }
         continue;
       }
 
       if (isKanji(c)) {
         klass.push("kanji");
 
+
+        // // 異体字セレクタの対応
+        if (isItaijiSelector(d)) {
+          c = c + d + e;
+          i = i + 2;
+          klass.push("itaijiselect");
+        }
+
+
         if (year = getYearOfKyoikuKanji(c)) {
           let kyoiku = "<ruby>" + c + "<rt>" + year + "</rt></ruby>"
           outputText.insertAdjacentHTML('beforeend', kyoiku);
           klass.push("joyo");
           continue;
-         }
+        }
 
         if (isJoyoKanji(c))
           klass.push("joyo");
 
         if (checkString.indexOf(c) % 2 == 1)
-          klass.push("jitai");
+          klass.push("itaiji");
 
 
         // 「叱」の対応
         if (c === "叱")
-          klass.push("jitai");
+          klass.push("itaiji");
 
         // 「𠮟」の対応
         if (c === "\uD842" && d === "\uDF9F") {
@@ -132,19 +148,34 @@
           klass.push("joyo shikaru");
         }
 
+        //CJK部首補助のチェック
+        if (cjkhojoBushu(c)) {
+          c = c + "[←部首] ";
+          bushu = bushu + 1;
+          klass.push("joyo itaiji");
+        }
+
+        //康熙部首のチェック
+        if (kokiBushu(c)) {
+          c = c + "[←部首] ";
+          bushu = bushu + 1;
+          klass.push("joyo itaiji");
+        }
+
+
         // サロゲートペア文字の対応
         if (checkString2.indexOf(c + d) % 3 === 1) {
           c = c + d;
           i++;
-          klass.push("jitai");
+          klass.push("itaiji");
         }
 
-        // 異体字セレクタの対応
-        if (isItaijiSelector(d)) {
-          c = c + d + e;
-          i = i + 2;
-          klass.push("itaijiselect");
-        }
+        // // 異体字セレクタの対応
+        // if (isItaijiSelector(d)) {
+        //   c = c + d + e;
+        //   i = i + 2;
+        //   klass.push("itaijiselect");
+        // }
       }
 
       let spanElement = document.createElement("span");
@@ -158,18 +189,39 @@
     };
     // ループ２終わり 
 
+    //文字列の最後に教育漢字があると、ルビ付きでコピペできない現象を回避
+    outputText.insertAdjacentHTML('beforeend', "\u200B\u000A");  //ゼロ幅スペース＋改行
+
+    //部首の文字コード混入の場合に注記を入れる
+    if (bushu > 0) {
+      chuukiText.insertAdjacentHTML('afterbegin', "【注意】テキストの中に漢字の部首の文字コードが" + bushu + "字混じっています。確認してください。<hr>");
+    }
+
+
   });
 
   // クリアボタン押下の処理
   document.querySelector('#clearButton').addEventListener('click', () => {
     const outputText = document.querySelector('#output');
-    document.querySelector('textarea').value = '';
+    const chuukiText = document.querySelector('#chuuki');
+    document.getElementById('input').value = '';
+    document.getElementById('input').focus();
     outputText.textContent = "";
+    chuukiText.textContent = "";
   });
 
+  //スマホ操作時のナビゲーション
+  document.querySelector('#hamburger').addEventListener('click', () => {
+    const nav = document.querySelector('.sp-nav');
+    nav.classList.toggle('toggle');
+  });
+
+  document.querySelector('.close').addEventListener('click', () =>  {
+    const nav = document.querySelector('.sp-nav');
+    nav.classList.toggle('toggle');
+  });
 
   //以下、文字チェック関数の定義
-
   function isKanji(c) {
     return /^[\u2E80-\u2EF3\u2F00-\u2FD5\u3400-\u9FFF\uD800-\uDFFF\uF900-\uFAEF]+$/.test(c);
   }
@@ -182,6 +234,16 @@
 
   function isItaijiSelector(c) {
     return /^[\uFE00-\uFE0F\uDB40]+$/.test(c);
+  }
+
+  //CJK部首補助のチェック
+  function kokiBushu(c) {
+    return /^[\u2E80-\u2EFF]+$/.test(c);
+  }
+
+  //康熙部首のチェック
+  function cjkhojoBushu(c) {
+    return /^[\u2F00-\u2FDF]+$/.test(c);
   }
 
 
