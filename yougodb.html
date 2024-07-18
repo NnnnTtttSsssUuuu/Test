@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/QCfavicon.ico">
+
+  <title>差別語・不快語・要注意語データベース</title>
+
+</head>
+
+<body>
+  <header>
+    <nav class="pc-nav">
+      <ul>
+        <li><a href="index.html">表記Quickチェッカー(仮)</a></li>
+        <li><a href="about.html">使い方</a></li>
+        <li><a class="gray" href="yougodb.html">差別語・不快語・要注意語データベース</a></li>
+      </ul>
+    </nav>
+
+    <nav class="sp-nav">
+      <ul>
+        <li><a href="index.html">表記Quickチェッカー(仮)</a></li>
+        <li><a href="about.html">使い方</a></li>
+        <li><a href="yougodb.html">差別語・不快語・要注意語データベース</a></li>
+        <li class="close"><span>閉じる</span></li>
+      </ul>
+    </nav>
+
+    <div id="hamburger">
+      <span></span>
+    </div>
+
+    <h1>差別語・不快語・要注意語データベース<br></h1>
+    <div class="subtitle">produced by Shogakukan Shuppan <span class="red qqq">Q</span>uality Center</div>
+  </header>
+
+  <p>
+    <br>小学館法務室作成「差別語・不快語・要注意語データベース」は、小学館共有サーバ内に保管されています。
+  </p>
+  <h3><a
+      href="https://www.auth.iij.jp/signin/id?config_code_hint=asiida-000009401909K&redirect_uri=https%3A%2F%2Fwww.auth.iij.jp%2Fidp%2Fsignin-callback"
+      target="_blank">小学館ポータル内</a>
+    <br><a href="https://shogakukan.app.box.com/file/1299501610982?s=bhwnegsq5fykqa8cpg89gc9v34w70o8d"
+      target="_blank">クォリティーセンター共有BOX内</a>
+  </h3>
+  <p>
+    上の２つのファイルは、それぞれアクセスできる権限の設定が異なりますが、内容は同じです。
+  </p>
+  <br>
+  <p class="kakomi">※ 本データベースは、小学館社内での編集参考のための資料として作成・公開されたものです。出版物に直接引用する、あるいは外部へ公開するなど要望がある場合は、必ず事前に小学館法務室にご相談ください。
+  </p>
+
+
+  <script>
+    document.querySelector('#hamburger').addEventListener('click', () => {
+      const nav = document.querySelector('.sp-nav');
+      nav.classList.toggle('toggle');
+    });
+
+    document.querySelector('.close').addEventListener('click', () => {
+      const nav = document.querySelector('.sp-nav');
+      nav.classList.toggle('toggle');
+    });  
+  </script>
+</body>
+
+</html>
