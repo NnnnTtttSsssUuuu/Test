@@ -1,9 +1,8 @@
 @charset "utf-8";
 
-/* *{
-  margin: 0;
-  padding: 0;
-} */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -11,6 +10,66 @@ body {
   font-family: "YuMincho", "游明朝", "Hiragino Mincho ProN", serif;
   position: relative;
 }
+
+form {
+  background: #fff;
+  width: 100%;
+  /* margin: auto; */
+  padding: 30px;
+  min-width: 200px;
+  max-width: 350px;
+  /* box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 3px; */
+}
+
+group + group {
+  margin-top: 12px;
+}
+
+.inline-radio {
+  display: flex;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #b6b6b6;
+
+
+  div {
+    position: relative;
+    flex: 1;
+  }
+
+  input {
+    width: 100%;
+    height: 23x;
+    opacity: 0;
+  }
+
+  label {
+    position: absolute;
+    top: 0; left: 0;
+    /* color: #b6b6b6; */
+    color: black;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    border-right: 1px solid #b6b6b6;
+  }
+
+  div:last-child label {
+    border-right: 0;
+  }
+
+  input:checked + label {
+    background: #d81b60;
+    font-weight: 500;
+    color: #fff;
+  }
+}
+
 
 .subtitle {
   font-size: 13px;
@@ -99,7 +158,8 @@ dd {
 
 table {
   border-collapse: collapse;
-  margin: 0;
+  /* margin: 0; */
+  margin: 1em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 100%;
   font-weight: normal;
@@ -113,7 +173,7 @@ table td {
   margin: 2em;
 }
 
-#safuchuList,#tateList {
+#tateList {
   display: block;
   overflow-y: scroll;
   max-height: calc(100vh/2);
@@ -142,7 +202,7 @@ thead {
   margin: 0.5em 2em;
 }
 
-#criteriaYellowList td:nth-of-type(2) {
+/* #criteriaYellowList td:nth-of-type(2) {
   background: rgb(251, 251, 138);
 }
 
@@ -164,10 +224,10 @@ thead {
 
 #criteriaGreenList td:nth-of-type(4) {
   background: white;
-}
+} */
 
 
-#tateList td:nth-of-type(1) {
+/* #tateList td:nth-of-type(1) {
   background: rgb(250, 200, 200);
   width: 150px;
 }
@@ -185,34 +245,31 @@ thead {
 #tateList td:nth-of-type(4) {
   background: white;
   width: 150px;
-}
+} */
 
-#safuchuList td:nth-of-type(1) {
-  background:rgb(251, 251, 138);
-  width: 200px;
+td:nth-of-type(1) {
+  background: rgb(250, 200, 200);
+  width: 120px;
 }
-
-#safuchuList td:nth-of-type(2) {
-  background: white;
-  width: 400px;
-}
-
 
 td:nth-of-type(2) {
-  background: rgb(250, 200, 200);
+  background: hsl(208, 100%,95%);
+  width: 120px;
 }
 
 td:nth-of-type(3) {
-  background: rgb(250, 200, 200);
+  background: hsl(100,80%,90%);
+  width: 120px;
 }
 
 td:nth-of-type(4) {
-  background: hsl(208, 100%,95%);
+  background: white;
+  width: 120px;
 }
 
-td:nth-of-type(5) {
+/* td:nth-of-type(5) {
   background: hsl(208, 100%,95%);
-}
+} */
 
 #input {
   width: 100%;
@@ -395,6 +452,12 @@ td:nth-of-type(5) {
   line-height: 0.5;
 }
 
+.selectsheetform {
+  column-width: 300px;
+}
+
+
+
 #criteriaInputFileName {
   line-height: 0.5;
 }
@@ -546,6 +609,10 @@ td:nth-of-type(5) {
 .lavender {
   background: lavender;
 }
+
+/* #saveCriteriaButton{
+   display: none;
+} */
 
 
 @media screen and (max-width: 380px) {
