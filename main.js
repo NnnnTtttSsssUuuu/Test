@@ -36,7 +36,8 @@
       });
 
 
-    fetch(openCriteriaFile)
+    // fetch(openCriteriaFile)　　キャッシュクリアを入れる
+    fetch(openCriteriaFile, { cache: "no-cache" })
       .then(response => {
         if (!response.ok) {
           throw new Error("Network response was not ok" + response.statusText);

@@ -219,7 +219,7 @@
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "My表記統一ワードリスト.csv";
+    a.download = "My表記指定ワードリスト.csv";
     a.click();
     URL.revokeObjectURL(url);
   });

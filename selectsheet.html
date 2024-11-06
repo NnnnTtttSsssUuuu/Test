@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="selectsheet.css">
   <link rel="icon" href="img/QCfavicon.ico">
 
-  <title>表記チェック表</title>
+  <title>ワードリストをつくる</title>
 
 </head>
 
@@ -45,16 +45,16 @@
 
   <p class="test"><br>
     表記Qucikチェッカー用の「表記統一ワードリスト」をつくる、シンプルなツールです。リストの基本になるのは、小学館出版クォリティーセンター制作の<a href="「基本表記チェック表」09.2.12.pdf"  target="_blank">「基本表記チェック表」</a>です。
-    <br><span class="red bold">＋</span>を押して選択リストを開き、示された表記のどれに揃えるかをクリックで指定します。どの表記にも揃えたくないときはクリックで選択を解除できます。最後に「リストをつくる」ボタンを押すとリストが完成し、下に表示されます。
-    <br>「リストを外部に保存する」ボタンで「My表記統一ワードリスト.csv」というファイルが保存され、表記Quickチェッカーで使用できます。
+    <br><span class="red bold">＋</span>を押して指定リストを開き、示された表記のどれに揃えるかをクリックで選択します。最後に「リストをつくる」ボタンを押すとリストが完成し、下に表示されます。
+    <br>「リストを外部に保存する」ボタンで「My表記指定ワードリスト.csv」というファイルが保存され、表記Quickチェッカーで使用できます。
   </p>
 
 
   <section class="section1">
-    <h2 class="accordion_title js-accordion-title  "> 1 複合動詞</h2>
+    <h3 class="accordion_title js-accordion-title  ">表記指定リスト<span class = "caption">　※クリックで選択／/再クリックで消去</span></h3>
     <article class="accordion_content">
 
-    <!-- <h2> 1 複合動詞</h2> -->
+    <h2> 1 複合動詞</h2>
     <form class="selectsheetform">
       <group class="inline-radio">
         <div><input type="radio" name="word1" value="1" checked><label>〜しに行く</label></div>
@@ -772,7 +772,7 @@
   </section>
 
   <p>
-    <br><button id="listGenerate"> リストをつくる</button>
+    <button id="listGenerate"> リストをつくる</button>
     <!-- <br><button id="resetList"> 初期状態に戻す</button> -->
     <br><button id="saveList"> リストを外部に保存する</button>
   <table id="checkWordList"></table>
